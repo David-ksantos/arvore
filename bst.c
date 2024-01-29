@@ -1,39 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct no
-{
-    int valor;
-    struct no *esq;
-    struct no *dir;
-} no;
-typedef no *arvore;
-
-arvore inserir(arvore raiz, int valor)
-{
-    if (raiz == NULL)
-    {
-        arvore novo = (arvore)malloc(sizeof(no));
-        novo->valor = valor;
-        novo->esq = NULL;
-        novo->dir = NULL;
-        return novo;
-    }
-
-    else
-    {
-        if (valor > raiz->valor)
-        {
-            raiz->dir = inserir(raiz->dir, valor);
-        }
-        else
-        {
-            raiz->esq = inserir(raiz->esq, valor);
-        }
-        return raiz;
-    }
-}
-
+#include "bst.h"
+/*  COMIT
+  1 - git add .
+  2 - git commit -u "nome do commit"
+  3 - git push -u origin main  */
+  
 int main()
 {
     return 0;
